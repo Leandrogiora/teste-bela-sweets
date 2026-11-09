@@ -1,10 +1,10 @@
-const CACHE = "bela-sweets-v1";
-const ARQUIVOS = ["./", "./index.html", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png"];
+const CACHE = "bela-sweets-v2";
+const ARQUIVOS = ["./", "./index.html", "./config.js", "./manifest.webmanifest", "./icon-192.png", "./icon-512.png", "./foto-ninho.jpg", "./foto-crunch.jpg"];
 self.addEventListener("install", e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(ARQUIVOS))); self.skipWaiting(); });
 self.addEventListener("activate", e => {
   e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim()));
 });
-/* Sempre tenta a internet primeiro (você vê as mudanças na hora); se estiver sem sinal, usa a cópia guardada. */
+/* Tenta a internet primeiro (mudanças aparecem na hora); sem sinal, usa a cópia guardada. */
 self.addEventListener("fetch", e => {
   if (e.request.method !== "GET") return;
   e.respondWith(
