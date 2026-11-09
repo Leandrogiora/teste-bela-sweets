@@ -5,7 +5,7 @@ const LOJA = {
   frase: "Panetones artesanais recheados, feitos por encomenda para o seu Natal.",
   aviso: "Encomendas com 1 dia de antecedência",
   whats: "5511998550446", /* DDI + DDD + número, só dígitos */
-  planilha: "" /* endereço (termina em /exec) do Google Apps Script que grava os pedidos na planilha */
+  planilha: "https://script.google.com/macros/s/AKfycbyp00AHGCGhNeklYKDKYLEn0jvEqsoDox4Vo9sU57mBqtOxbxZyMBuG-aPgsj0eL3VR/exec" /* endereço (termina em /exec) do Google Apps Script que grava os pedidos na planilha */
 };
 /* cor e cor2 desenham o doce quando não há foto. "foto" aceita uma imagem embutida (data URI). */
 const PRODUTOS = [
